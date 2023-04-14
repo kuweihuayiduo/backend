@@ -56,5 +56,35 @@ docker push aceysx/xinqiu-be:v1 //把 aceysx 换成自己的 docker hub username
 ```
 最后只需要把 docker-compose.yml 文件copy到所在的服务器执行 docker-compose up -d 即可
 
+## 小程序
+
+### 准备
+- taro 3.5+
+- Node 16+
+- 小程序APP_ID
+- wechat devtools
+
+### 替换app id
+将 project.config.json 文件中的 APP_ID 替换成自己的
+
+### 替换接口
+在 socket.ts 文件中替换自己的 url，这是一个 socket 接口，微信要求必须是 https（wss）
+
+### 本地启动
+```agsl
+npm run dev:weapp
+```
+
+### 打包构建
+```agsl
+NODE_ENV=production taro build --type weapp
+```
+
+### 上传发布
+#### 上传到小程序管理后台
+![](https://images-1257364845.cos.ap-nanjing.myqcloud.com/1681494251287.png)
+
+#### 后台提交审核
+![](https://images-1257364845.cos.ap-nanjing.myqcloud.com/1681494314748.png)
 
 
