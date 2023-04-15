@@ -72,6 +72,7 @@ docker push aceysx/xinqiu-be:v1 //把 aceysx 换成自己的 docker hub username
 
 ### 本地启动
 ```agsl
+npm i
 npm run dev:weapp
 ```
 
