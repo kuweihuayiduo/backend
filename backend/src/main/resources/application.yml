@@ -25,3 +25,5 @@ xinqiu:
   auth: ${AUTH_KEY:xinqiu}
   freeApiKey: ${FREE_API_KEY:}
   notAuthContent: ${NO_AUTH_CONTENT:apikey无效}
+  yourMsgFile: ${YOUR_MSG_FILE}
+  #yourConfigFile: ${YOUR_CONFIG_FILE:./config.properties}

@@ -4,6 +4,7 @@ import cn.first.tool.controllers.request.Message;
 import cn.first.tool.controllers.response.QueryBalanceResponse;
 import cn.first.tool.domain.OpenAiConfig;
 import cn.first.tool.domain.XinQiuConfig;
+import cn.first.tool.utils.MessageUtils;
 import cn.hutool.core.map.MapUtil;
 import cn.hutool.core.text.UnicodeUtil;
 import cn.hutool.core.util.StrUtil;
@@ -149,7 +150,7 @@ public class ChatGPTService {
         reader.close();
         // 如果出错，抛出异常
         if (printErrorMsg) {
-            send.accept(errMsg.toString());
+            send.accept(MessageUtils.handErrorMsg(errMsg.toString()));
             send.accept("END");
         }
         send.accept("END");

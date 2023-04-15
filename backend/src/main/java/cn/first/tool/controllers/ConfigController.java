@@ -29,7 +29,6 @@ public class ConfigController {
             config.setContent(content);
             return "设置成功，请刷新 ChatGPT 页面";
         }
-
         return "auth token 不正确";
     }
 
