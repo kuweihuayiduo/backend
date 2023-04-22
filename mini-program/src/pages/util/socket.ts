@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro'
 
-const url = `wss://HOST/chatgpt-proxy/socket`;
+const url = `wss://HOST/xinqiu/socket`;
 
 class CustomSocket {
   public socketOpen: boolean = false
