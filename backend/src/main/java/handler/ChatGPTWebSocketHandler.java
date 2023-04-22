@@ -23,9 +23,7 @@ public class ChatGPTWebSocketHandler extends TextWebSocketHandler {
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws IOException {
         String request = message.getPayload();
         Message msg = JSONObject.parseObject(request, Message.class);
-        if (Objects.equals(msg.getApiKey(), "mini")) {
-            msg.setApiKey(config.getFreeApiKey());
-        }
+        msg.setApiKey(config.getFreeApiKey());
 
         chatGPTService.sendResponse(msg, response -> {
             try {
