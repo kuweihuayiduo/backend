@@ -15,6 +15,7 @@ public class XinQiuConfig {
     private String auth = "xinqiu";
     private String freeApiKey;
     private String notAuthContent;
-    private String yourMsgFile;
-    private String yourConfigFile;
+
+    transient private String yourMsgFile;
+    transient private String yourConfigFile;
 }

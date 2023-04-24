@@ -18,7 +18,7 @@ services:
       FREE_API_KEY:
       NO_AUTH_CONTENT: apikey 无效
       YOUR_MSG_FILE: /home/xinqiu/you.txt
-      #YOUR_CONFIG_FILE: /root/msg/config.properties
+      YOUR_CONFIG_FILE: /home/xinqiu/config.json
     networks:
       main:
         aliases:
