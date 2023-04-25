@@ -3,7 +3,7 @@
 if [ "$1" = "init" ]
 then
   docker rm -f wechat-chatgpt
-  docker run -it --name wechat-chatgpt \
+  docker run -it -d --name wechat-chatgpt \
       -e OPENAI_API_KEY="$2" \
       -e MODEL="gpt-3.5-turbo" \
       -v $(pwd)/data:/app/data/wechat-assistant.memory-card.json \
